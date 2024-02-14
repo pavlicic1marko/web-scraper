@@ -23,6 +23,27 @@ def write_file(path, data):
         f.write(data)
 
 
+def append_to_file(file_path, data):
+    with open(file_path,'a') as f:
+        f.write(data+'\n') # or ,
+
+
+def delete_file_contents(path):
+    open(path,'w').close()
+
+
+def file_to_set(file_name):
+    results = set()
+    with open(file_name, 'rt') as f:  # rt mode is read and write
+        for line in f:
+            results.add(line.replace('\n',''))
+    return  results
+
+
+def set_to_file(links,file_name):
+    with open(file_name, 'w') as f:
+        for line in sorted(links):
+            f.write(line+'\n')
 
 
 create_proj_dir('this_wasite')

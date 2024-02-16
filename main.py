@@ -5,7 +5,7 @@ from domain import *
 from demo import *
 
 PROJECT_NAME = 'the site'
-HOME_PAGE = 'https://coinmarketcap.com/'
+HOME_PAGE = 'https://en.wikipedia.org/wiki/King%27s_Dock,_Port_of_Liverpool'
 DOMAIN_NAME = get_domain_name(HOME_PAGE)
 QUEUE_FILE = PROJECT_NAME + '/queue.txt'
 CRAWLED_FILE = PROJECT_NAME + '/crawled.txt'

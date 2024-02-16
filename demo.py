@@ -46,4 +46,3 @@ def set_to_file(links,file_name):
             f.write(line+'\n')
 
 
-create_proj_dir('this_wasite')

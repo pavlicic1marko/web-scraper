@@ -3,6 +3,7 @@ from link_finder import LinkFinder
 from demo import *
 from domain import *
 
+
 class Spider:
     project_name = ''
     base_url = ''
@@ -45,7 +46,7 @@ class Spider:
             response = urlopen(page_url)
             if 'text/html' in response.getheader('Content-Type'): #  can be PDF link or download link
                 html_bytes = response.read()
-                html_string = html_bytes.decode("utf-8")
+                html_string = html_bytes.decode('utf-8')
             finder = LinkFinder(Spider.base_url,page_url)
             finder.feed(html_string)
         except Exception as e:
